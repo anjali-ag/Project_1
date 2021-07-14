@@ -1,5 +1,7 @@
 urlfile="https://raw.githubusercontent.com/nychealth/covid-vaccine-data/main/doses/doses-by-day.csv"
 nycdata<-read.csv(url(urlfile))
+
+# This is to convert the dates from String to Date format in order to use it for the graphs
 dates=as.Date(nycdata[,1])
 dates[length(dates)-1]
 
